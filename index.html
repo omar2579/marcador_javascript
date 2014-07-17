@@ -6,18 +6,19 @@
 	<title>Marcador</title>
 	<script src="js/jquery.min.js"></script>
     <script src="js/marcador.js"></script>
-	<link rel="stylesheet" href="">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/estilo.css" rel="stylesheet" />
 </head>
 <body>
-	<label>punto para player 1</label>
-	<button value="1">player1</button>
-	<br>
-	<label>punto para player2</label>
-	<button value="2">player2</button>
-	<br>
-	<label id="player1">love</label>
-	<label> - </label>
-	<label id="player2">all</label>
+	<div class="container">
+		<label class="col-sm-2">punto para player 1</label>
+		<button value="1" class="btn btn-default">player1</button>
+		<br>
+		<label class="col-sm-2">punto para player2</label>
+		<button value="2" class="btn btn-default">player2</button>
+		<br>
+		<label id="score">LOVE - ALL</label>
+	</div>
 	
 </body>
 </html>

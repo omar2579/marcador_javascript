@@ -1,4 +1,4 @@
-var puntos=["love","fifteen","thirty","fourty","advantage player "]
+var puntos=["LOVE","FIFTEEN","THIRTY","FOURTY","advantage player "]
 var player1=0,
     player2=0;
 $(document).ready(function() {
@@ -15,46 +15,46 @@ function point(player){
       switch(player1){
               case 2:
                     switch(player2){
-                      case 3: player1++; console.log("douse");
+                      case 3: player1++; $("#score").text("DOUCE");
                       break;
-                      default: player1++;console.log(puntos[player1]);
+                      default: player1++;score();
                     }
               break;
               case 3:
                     switch(player2){
-                      case 3: player1++; console.log("ventaja player1");
+                      case 3: player1++; $("#score").text("ADVANTAGE PLAYER 1");
                       break;
-                      case 4: player2=3;console.log("douse");
+                      case 4: player2=3;$("#score").text("DOUCE");
                       break;
-                      default: player1=0;player2=0;console.log("player1 wins");
+                      default: player1=0;player2=0;$("#score").text("PLAYER 1 WINS");
                     }
               break;      
-              case 4: player1=0;player2=0;console.log("player1 wins");
+              case 4: player1=0;player2=0;$("#score").text("PLAYER 1 WINS");
               break;      
-              default: player1++; console.log(puntos[player1]+" - "+puntos[player2]);      
+              default: player1++; score();      
             }
     break;
     case "2":
       switch(player2){
               case 2:
                     switch(player1){
-                      case 3: player2++; console.log("douse");
+                      case 3: player2++; $("#score").text("DOUCE");
                       break;
-                      default: player2++;console.log(puntos[player1]+" - "+puntos[player2]);
+                      default: player2++;score();
                     }
               break;
               case 3:
                     switch(player1){
-                      case 3: player2++; console.log("ventaja player2");
+                      case 3: player2++; $("#score").text("ADVANTAGE PLAYER 2");
                       break;
-                      case 4: player1=3;console.log("douse");
+                      case 4: player1=3;$("#score").text("DOUCE");
                       break;
-                      default: player1=0;player2=0;console.log("player2 wins");
+                      default: player1=0;player2=0;$("#score").text("PLAYER 2 WINS");
                     }
               break;      
-              case 4: player1=0;player2=0;console.log("player2 wins");
+              case 4: player1=0;player2=0;$("#score").text("PLAYER 2 WINS");
               break;      
-              default: player2++; console.log(puntos[player1]+" - "+puntos[player2]);      
+              default: player2++; score();      
             }
     break;
   }
@@ -62,5 +62,5 @@ function point(player){
 }
 
 function score(){
-
+  $("#score").text(puntos[player1]+" - "+puntos[player2]);
 }
